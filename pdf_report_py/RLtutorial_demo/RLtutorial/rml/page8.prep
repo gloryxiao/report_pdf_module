@@ -1,0 +1,72 @@
+<!DOCTYPE document SYSTEM "rml.dtd">
+<document filename="example_01.pdf">
+
+<docinit>
+    <registerTTFont faceName="Helvetica" fileName="rml/fonts/LTe50263.ttf"/>
+    <registerTTFont faceName="HelveticaNeue-Bold" fileName="rml/fonts/LTe50261.ttf"/>
+    <registerTTFont faceName="HelveticaYahei-Bold" fileName="rml/fonts/Yahei.ttf"/>
+    <registerTTFont faceName="HelveticaSong" fileName="rml/fonts/song.ttf"/>
+</docinit>
+
+
+<template showBoundary="1">
+    <pageTemplate id="main" >
+        <frame id="first" x1="100" y1="400" width="150" height="200"/>
+        <frame id="second" x1="300" y1="400" width="140" height="200"/>
+    </pageTemplate>
+</template>
+
+<stylesheet>
+    <paraStyle name="textstyle1" fontName="HelveticaNeue-Bold" fontSize="9" leading="10"/>
+    <blockTableStyle id="blocktablestyle1">
+        <blockFont name="HelveticaYahei-Bold" size="16" start="0,1" stop="2,1"/>
+
+        <blockTextColor colorName="purple"/>
+
+        <blockTextColor colorName="black" start="1,0" stop="1, -1"/>
+
+        <lineStyle kind="LINEBELOW" colorName="red" start="0, 3" stop="-1,3" thickness="2"/>
+
+        <lineStyle kind="LINEAFTER" colorName="maroon" start="0, 3" stop="-1,3" thickness="2"/>
+
+        <lineStyle kind="LINEBEFORE" colorName="black" start="0, 3" stop="-1,3" thickness="2"/>
+
+        <lineStyle kind="LINEABOVE" colorName="yellow" start="0, 3" stop="-1,3" thickness="2"/>
+
+        <lineStyle kind="GRID" colorName="green" start="0, 0" stop="-1,0" thickness="1"/>
+
+    </blockTableStyle>
+</stylesheet>
+
+<story>
+
+    <blockTable style="blocktablestyle1">
+                    <tr>
+                        <td> This is </td>
+                        <td>the same table</td>
+                        <td>three columns</td>
+                    </tr>
+                    <tr>
+                        <td>show how </td>
+                        <td>
+                            to style each cell
+                        </td>
+                        <td>differently</td>
+                    </tr>
+                    <tr>
+                        <td>have a look</td>
+                        <td>at blocktablestyle</td>
+                        <td>to see how it works.</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>use line styles for different</td>
+                        <td>at blocktablestyle; note that</td>
+                        <td>to see how it works.</td>
+
+                    </tr>
+                </blockTable>
+</story>
+
+</document>

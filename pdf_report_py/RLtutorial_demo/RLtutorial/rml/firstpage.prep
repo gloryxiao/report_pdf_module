@@ -1,0 +1,38 @@
+<!DOCTYPE document SYSTEM "rml.dtd">
+<document filename="example_01.pdf">
+
+<template>
+    <pageTemplate id="mian">
+        <frame id="first" x1="100" y1="400" width="150" height="200"/>
+    </pageTemplate>
+</template>
+
+<stylesheet>
+
+</stylesheet>
+
+<story>
+    <para>
+        Welcome to RML
+    </para>
+    <para>
+        this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia
+        a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,
+            this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this
+            ia a story,
+    </para>
+
+    <para>
+        it should be encoded in "para" tags to turn it into paras.it should be encoded in "para" tags to turn it into
+        paras.it should be encoded in "para" tags to turn it into paras.it should be encoded in "para" tags to
+        turn it into paras.
+        it should be encoded in "para" tags to turn it into paras.it should be encoded in "para" tags to turn it into
+        paras.
+
+        it should be encoded in "para" tags to turn it into paras.
+
+        it should be encoded in "para" tags to turn it into paras.
+    </para>
+</story>
+
+</document>

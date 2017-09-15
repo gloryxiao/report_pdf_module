@@ -1,0 +1,77 @@
+<!DOCTYPE document SYSTEM "rml.dtd">
+<document filename="example_01.pdf">
+
+<docinit>
+    <registerTTFont faceName="Helvetica" fileName="rml/fonts/LTe50263.ttf"/>
+    <registerTTFont faceName="HelveticaNeue-Bold" fileName="rml/fonts/LTe50261.ttf"/>
+    <registerTTFont faceName="HelveticaYahei-Bold" fileName="rml/fonts/Yahei.ttf"/>
+    <registerTTFont faceName="HelveticaSong" fileName="rml/fonts/song.ttf"/>
+</docinit>
+
+
+<template showBoundary="1">
+    <pageTemplate id="main" >
+        <pageGraphics>
+            <place x="10" y="500" width="250" height="250">
+                <blockTable style="blocktablestyle1">
+                    <tr>
+                        <td> A block</td> <td>table is defined</td>
+                    </tr>
+                    <tr>
+                        <td>inside </td>
+                        <td>
+                            <para style="textstyle1">
+                                and can be styleed using bloackTablestyles
+                                and para tags
+                            </para>
+                        </td>
+                    </tr>
+                </blockTable>
+            </place>
+        </pageGraphics>
+        <frame id="first" x1="100" y1="400" width="150" height="200"/>
+        <frame id="second" x1="300" y1="400" width="140" height="200"/>
+    </pageTemplate>
+</template>
+
+<stylesheet>
+    <paraStyle name="textstyle1" fontName="HelveticaNeue-Bold" fontSize="9" leading="10"/>
+    <blockTableStyle id="blocktablestyle1">
+        <blockFont name="HelveticaYahei-Bold"/>
+        <blockFont name="Helvetica" size="8"/>
+        <blockTextColor colorName="green"/>
+    </blockTableStyle>
+</stylesheet>
+
+<story>
+    <para>
+        Welcome to RML
+    </para>
+    <blockTable>
+                    <tr>
+                        <td> <para textColor="green">A block</para></td>
+                        <td>table</td>
+                    </tr>
+                    <tr>
+                        <td>inside </td><td> a place tag this is a long string of text
+                        which won't wrap by default.</td>
+                    </tr>
+    </blockTable>
+
+    <blockTable style="blocktablestyle1">
+                    <tr>
+                        <td> <para textColor="red">This is </para></td> <td>the same table</td>
+                    </tr>
+                    <tr>
+                        <td>but with </td>
+                        <td>
+                            <para style="textstyle1">
+                                and can be styleed using bloackTablestyles
+                                and para tags
+                            </para>
+                        </td>
+                    </tr>
+                </blockTable>
+</story>
+
+</document>

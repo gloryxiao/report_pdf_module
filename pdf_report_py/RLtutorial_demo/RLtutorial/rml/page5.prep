@@ -1,0 +1,57 @@
+<!DOCTYPE document SYSTEM "rml.dtd">
+<document filename="example_01.pdf">
+
+<docinit>
+    <registerTTFont faceName="Helvetica" fileName="rml/fonts/LTe50263.ttf"/>
+    <registerTTFont faceName="HelveticaNeue-Bold" fileName="rml/fonts/LTe50261.ttf"/>
+    <registerTTFont faceName="HelveticaYahei-Bold" fileName="rml/fonts/Yahei.ttf"/>
+    <registerTTFont faceName="HelveticaSong" fileName="rml/fonts/song.ttf"/>
+</docinit>
+
+
+<template showBoundary="1">
+    <pageTemplate id="mian" >
+        <pageGraphics>
+            <image file="file/timg.gif" x="300" y="700" width="100" height="100"/>
+            <fill color="red"/>
+            <setFont name="HelveticaSong" size="24"/>
+            <drawString x="100" y="600"> Hello!</drawString>
+        </pageGraphics>
+        <frame id="first" x1="100" y1="400" width="150" height="200"/>
+        <frame id="second" x1="300" y1="400" width="140" height="200"/>
+    </pageTemplate>
+</template>
+
+<stylesheet>
+    <paraStyle name="textstyle1" fontName="Helvetica" fontSize="9" leading="10"/>
+</stylesheet>
+
+<story>
+    <para>
+        Welcome to RML
+    </para>
+    <para style="textstyle1" fontSize="12">
+        this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia
+        a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,
+            this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this ia a story,this
+            ia a story,
+    </para>
+
+    <para style="textstyle1" textColor="blue">
+        it should be encoded in "para" tags to turn it into paras.it should be encoded in "para" tags to turn it into
+        paras.it should be encoded in "para" tags to turn it into paras.it should be encoded in "para" tags to
+        turn it into paras.
+        it should be encoded in "para" tags to turn it into paras.it should be encoded in "para" tags to turn it into
+        paras.
+
+        it should be encoded in "para" tags to turn it into paras.
+
+        it should be encoded in "para" tags to turn it into paras.
+    </para>
+    <illustration width="50" height="100" borderStrokeWidth="1" borderStrokeColor="green">
+    <image file="file/timg1.gif" x="10" y="10"/>
+    </illustration>
+
+</story>
+
+</document>
